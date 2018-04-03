@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeCommand Unity Project", "Assembly-CSharp.csproj", "{B06CE692-FC5B-5D99-96FA-AE611DE0A9E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeCommand Unity Project", "Assembly-CSharp-Editor.csproj", "{74836263-AAD2-6729-B5CB-320CB7745066}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B06CE692-FC5B-5D99-96FA-AE611DE0A9E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B06CE692-FC5B-5D99-96FA-AE611DE0A9E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B06CE692-FC5B-5D99-96FA-AE611DE0A9E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B06CE692-FC5B-5D99-96FA-AE611DE0A9E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74836263-AAD2-6729-B5CB-320CB7745066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74836263-AAD2-6729-B5CB-320CB7745066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74836263-AAD2-6729-B5CB-320CB7745066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74836263-AAD2-6729-B5CB-320CB7745066}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
