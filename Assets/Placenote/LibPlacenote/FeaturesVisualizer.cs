@@ -89,7 +89,7 @@ public class FeaturesVisualizer : MonoBehaviour, PlacenoteListener
 
 			if (Utils2.PointVisibleToCamera(points[i],Camera.main)){
 				// green
-				if (map [i].measCount > 9) {
+				if (map [i].measCount > 6) {
 					numGreenDotsVisible++;
 				} else {
 					numBrownDotsVisible++;
