@@ -1,4 +1,4 @@
-if [ -z $1 ]; then
+if [ -z "$1" ]; then
 	printf "\n No $red argument / git commit message $nocolor supplied. Exiting \n\n"
 	exit 1
 fi
