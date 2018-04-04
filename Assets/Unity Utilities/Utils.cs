@@ -13,6 +13,15 @@ public static class Utils2 {
 		return new Vector3(vectorA.x,0,vectorA.z);
 	}
 
+	public static bool PointVisibleToCamera(Vector3 p, Camera c){
+		Vector3 cp = c.WorldToViewportPoint (p);
+		return 
+			cp.x >= 0 &&
+			cp.x <= 1 &&
+			cp.y >= 0 &&
+			cp.y <= 1 &&
+			cp.z > 0;
+	}
 
 	public static float HighestY(Transform tt){
 		// Takes the transformand all children and goes through each inddividual mesh's world bounds to figure out what is the highest worldspace point occupied by any child

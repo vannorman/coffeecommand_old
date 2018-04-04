@@ -19,9 +19,12 @@ namespace UnityEngine.XR.iOS
 			GameObject plane;
 			if (planePrefab != null) {
 				plane = GameObject.Instantiate(planePrefab);
+				DebugText.Overflow ("full plane!");
 			} else {
 				plane = new GameObject (); //put in a blank gameObject to get at least a transform to manipulate
+				DebugText.Overflow ("empty plane!");
 			}
+
 
 			plane.name = arPlaneAnchor.identifier;
 
@@ -40,7 +43,7 @@ namespace UnityEngine.XR.iOS
 
 			if (mf != null) {
                 //since our plane mesh is actually 10mx10m in the world, we scale it here by 0.1f
-                mf.gameObject.transform.localScale = new Vector3(arPlaneAnchor.extent.x * 0.1f ,arPlaneAnchor.extent.y * 0.1f ,arPlaneAnchor.extent.z * 0.1f );
+                mf.gameObject.transform.localScale = new Vector3(arPlaneAnchor.extent.x  ,arPlaneAnchor.extent.y ,arPlaneAnchor.extent.z );
 
                 //convert our center position to unity coords
                 mf.gameObject.transform.localPosition = new Vector3(arPlaneAnchor.center.x,arPlaneAnchor.center.y, -arPlaneAnchor.center.z);

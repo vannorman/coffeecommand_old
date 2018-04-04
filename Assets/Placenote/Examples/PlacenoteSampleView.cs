@@ -338,7 +338,9 @@ public class PlacenoteSampleView : MonoBehaviour, PlacenoteListener
 	public GameObject onionPrefab;
 	public void PlaceRandomOnion() { 
 		float radius = 5f;
-		GameObject onion = (GameObject)Instantiate(onionPrefab,Camera.main.transform.position + Utils2.FlattenVector(UnityEngine.Random.onUnitSphere) * radius + (Vector3.up * UnityEngine.Random.Range(-3,3f)), Quaternion.identity);
+		Vector3 randPos = Utils2.FlattenVector(UnityEngine.Random.onUnitSphere) * radius + (Vector3.up * UnityEngine.Random.Range(-3,3f));
+		randPos = Camera.main.transform.forward * 2;
+		GameObject onion = (GameObject)Instantiate(onionPrefab,Camera.main.transform.position + randPos, Quaternion.identity);
 		onionList.Add (onion);
 //		DebugText.place
 	}

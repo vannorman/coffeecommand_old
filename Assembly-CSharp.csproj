@@ -51,14 +51,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CC.cs" />
-     <Compile Include="Assets\DebugText.cs" />
-     <Compile Include="Assets\MetalOnion.cs" />
-     <Compile Include="Assets\ObjectDetector.cs" />
-     <Compile Include="Assets\OnionDetector.cs" />
-     <Compile Include="Assets\ParticlePainter.cs" />
-     <Compile Include="Assets\PhoneOrientation.cs" />
-     <Compile Include="Assets\PhoneUI.cs" />
+     <Compile Include="Assets\_scripts\CC.cs" />
+     <Compile Include="Assets\_scripts\DebugText.cs" />
+     <Compile Include="Assets\_scripts\MetalOnion.cs" />
+     <Compile Include="Assets\_scripts\ObjectDetector.cs" />
+     <Compile Include="Assets\_scripts\OnionDetector.cs" />
+     <Compile Include="Assets\_scripts\ParticlePainter.cs" />
+     <Compile Include="Assets\_scripts\PhoneOrientation.cs" />
+     <Compile Include="Assets\_scripts\PhoneUI.cs" />
+     <Compile Include="Assets\_scripts\PlaneAnchorManager.cs" />
+     <Compile Include="Assets\_scripts\PlaneInfo.cs" />
+     <Compile Include="Assets\_scripts\Tendril.cs" />
+     <Compile Include="Assets\BatteryUpload.cs" />
      <Compile Include="Assets\Placenote\Examples\MapInfoElement.cs" />
      <Compile Include="Assets\Placenote\Examples\PlacenoteSampleView.cs" />
      <Compile Include="Assets\Placenote\Examples\ToastManager.cs" />
@@ -68,8 +72,7 @@
      <Compile Include="Assets\Placenote\LibPlacenote\PlacenoteCameraManager.cs" />
      <Compile Include="Assets\Placenote\LibPlacenote\PlacenoteListener.cs" />
      <Compile Include="Assets\Placenote\LibPlacenote\PNUtility.cs" />
-     <Compile Include="Assets\PlaneAnchorManager.cs" />
-     <Compile Include="Assets\Tendril.cs" />
+     <Compile Include="Assets\SmoothFollowTarget.cs" />
      <Compile Include="Assets\Unity Utilities\EditorTools.cs" />
      <Compile Include="Assets\Unity Utilities\Fraction.cs" />
      <Compile Include="Assets\Unity Utilities\MathUtils.cs" />

@@ -76,14 +76,25 @@ public class FeaturesVisualizer : MonoBehaviour, PlacenoteListener
 
 		Vector3[] points = new Vector3[map.Length];
 		Color[] colors = new Color[map.Length];
+		int numBrownDotsVisible = 0;
+		int numGreenDotsVisible = 0;
 		for (int i = 0; i < map.Length; ++i) {
 
 			points [i].x = map [i].point.x;
 			points [i].y = map [i].point.y;
 			points [i].z = -map [i].point.z;
 			colors [i].r = 1 - map [i].measCount / 10f;
-			colors [i].b = 0;
 			colors [i].g = map [i].measCount / 10f;
+			colors [i].b = 0;
+
+			if (Utils2.PointVisibleToCamera(points[i],Camera.main)){
+				// green
+				if (map [i].measCount > 9) {
+					numGreenDotsVisible++;
+				} else {
+					numBrownDotsVisible++;
+				}
+			}
 
 			if (map [i].measCount < 4) {
 				colors [i].a = 0;
@@ -91,6 +102,10 @@ public class FeaturesVisualizer : MonoBehaviour, PlacenoteListener
 				colors [i].a = 0.2f + 0.8f * (map [i].measCount / 10f);
 			}
 		}
+		DebugText.SetBrownDots (numBrownDotsVisible.ToString ());
+		DebugText.SetGreenDots (numGreenDotsVisible.ToString ());
+
+		FindObjectOfType<BatteryUpload> ().SetFillAmount (numGreenDotsVisible / 50f);
 
 		// Need to update indicies too!
 		int[] indices = new int[map.Length];
