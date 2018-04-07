@@ -51,6 +51,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Unity Utilities\Battlehub\MeshCombiner\Scripts\Editor\MeshToolsMenu.cs" />
+     <Compile Include="Assets\Unity Utilities\Battlehub\PivotEditor\Scripts\Editor\MeshToolsMenu.cs" />
+     <Compile Include="Assets\Unity Utilities\Battlehub\PivotEditor\Scripts\Editor\PivotPointEditor.cs" />
      <Compile Include="Assets\UnityARKitPlugin\Plugins\iOS\UnityARKit\Editor\UnityARBuildPostprocessor.cs" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>

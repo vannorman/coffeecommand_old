@@ -437,4 +437,6 @@ public class PlacenoteSampleView : MonoBehaviour, PlacenoteListener
 			}
 		}
 	}
+
+
 }

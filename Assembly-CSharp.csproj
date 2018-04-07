@@ -51,18 +51,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_scripts\BatteryUpload.cs" />
+     <Compile Include="Assets\_scripts\ButtonListener.cs" />
      <Compile Include="Assets\_scripts\CC.cs" />
+     <Compile Include="Assets\_scripts\DamageGiver.cs" />
+     <Compile Include="Assets\_scripts\DamageReceiver.cs" />
      <Compile Include="Assets\_scripts\DebugText.cs" />
+     <Compile Include="Assets\_scripts\FireInterval.cs" />
+     <Compile Include="Assets\_scripts\GrowOverTime.cs" />
      <Compile Include="Assets\_scripts\MetalOnion.cs" />
      <Compile Include="Assets\_scripts\ObjectDetector.cs" />
+     <Compile Include="Assets\_scripts\OnionDamagGiver.cs" />
      <Compile Include="Assets\_scripts\OnionDetector.cs" />
      <Compile Include="Assets\_scripts\ParticlePainter.cs" />
      <Compile Include="Assets\_scripts\PhoneOrientation.cs" />
      <Compile Include="Assets\_scripts\PhoneUI.cs" />
      <Compile Include="Assets\_scripts\PlaneAnchorManager.cs" />
      <Compile Include="Assets\_scripts\PlaneInfo.cs" />
+     <Compile Include="Assets\_scripts\RotateInterval.cs" />
+     <Compile Include="Assets\_scripts\ShipDamageReceiver.cs" />
+     <Compile Include="Assets\_scripts\ShipWeapons.cs" />
+     <Compile Include="Assets\_scripts\SmoothFollowTarget.cs" />
      <Compile Include="Assets\_scripts\Tendril.cs" />
-     <Compile Include="Assets\BatteryUpload.cs" />
      <Compile Include="Assets\Placenote\Examples\MapInfoElement.cs" />
      <Compile Include="Assets\Placenote\Examples\PlacenoteSampleView.cs" />
      <Compile Include="Assets\Placenote\Examples\ToastManager.cs" />
@@ -72,13 +82,22 @@
      <Compile Include="Assets\Placenote\LibPlacenote\PlacenoteCameraManager.cs" />
      <Compile Include="Assets\Placenote\LibPlacenote\PlacenoteListener.cs" />
      <Compile Include="Assets\Placenote\LibPlacenote\PNUtility.cs" />
-     <Compile Include="Assets\SmoothFollowTarget.cs" />
+     <Compile Include="Assets\Unity Utilities\Battlehub\Integration\IntegrationCommon.cs" />
+     <Compile Include="Assets\Unity Utilities\Battlehub\Integration\MeshCombinerIntegration.cs" />
+     <Compile Include="Assets\Unity Utilities\Battlehub\Integration\MeshDeformerIntegration.cs" />
+     <Compile Include="Assets\Unity Utilities\Battlehub\Integration\WiresIntegration.cs" />
+     <Compile Include="Assets\Unity Utilities\Battlehub\MeshCombiner\Scripts\MeshUtils.cs" />
+     <Compile Include="Assets\Unity Utilities\Battlehub\PivotEditor\Scripts\MeshUtils.cs" />
+     <Compile Include="Assets\Unity Utilities\Battlehub\PivotEditor\Scripts\Pivot.cs" />
+     <Compile Include="Assets\Unity Utilities\Battlehub\PivotEditor\Scripts\PivotDesignTime.cs" />
      <Compile Include="Assets\Unity Utilities\EditorTools.cs" />
      <Compile Include="Assets\Unity Utilities\Fraction.cs" />
      <Compile Include="Assets\Unity Utilities\MathUtils.cs" />
      <Compile Include="Assets\Unity Utilities\MeshCombiner.cs" />
      <Compile Include="Assets\Unity Utilities\MouseLook.cs" />
+     <Compile Include="Assets\Unity Utilities\ScrollTexture.cs" />
      <Compile Include="Assets\Unity Utilities\SinHover.cs" />
+     <Compile Include="Assets\Unity Utilities\TimedObjectDestructor.cs" />
      <Compile Include="Assets\Unity Utilities\Utils.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitFaceTrackingRemoteConnection.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitRemoteConnection.cs" />
@@ -131,6 +150,7 @@
      <None Include="Assets\Unity Utilities\Shaders\Toony-OutlineOnly.shader" />
      <None Include="Assets\Unity Utilities\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Unity Utilities\Shaders\Toony-LightedOutlineTransparent.shader" />
+     <None Include="Assets\Unity Utilities\Battlehub\MeshCombiner\MeshCombiner Documentation.txt" />
      <None Include="Assets\UnityARKitPlugin\ARKitRemote\ARKITREMOTE.txt" />
      <None Include="Assets\Unity Utilities\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Unity Utilities\Shaders\Toony-Lighted.shader" />
@@ -143,6 +163,7 @@
      <None Include="Assets\Unity Utilities\Shaders\Toony-Basic _OLD.shader" />
      <None Include="Assets\Unity Utilities\Shaders\Toony-Lighted-Transparent.shader" />
      <None Include="Assets\Placenote\Shaders\VertexColorPointCloud.shader" />
+     <None Include="Assets\Textures Shaders Materials\Spinna z fwd Moving Line fast dotted.shader" />
      <None Include="Assets\Unity Utilities\Shaders\Toony-BasicOutline Alpha.shader" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>

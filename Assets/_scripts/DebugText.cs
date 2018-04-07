@@ -18,6 +18,8 @@ public class DebugText : MonoBehaviour {
 
 
 
+
+
 //	string brownDots = "";
 //	string greenDots = "";
 	string camHoverObj = "";
@@ -28,6 +30,7 @@ public class DebugText : MonoBehaviour {
 	string onionState=  "";
 	string closeToPlane = "";
 	string overflow = "";
+	string seekPlanes = "";
 	void Update () {
 		
 		t.text = ""
@@ -38,6 +41,7 @@ public class DebugText : MonoBehaviour {
 		+ "Onion State:" + onionState + "\n"
 		+ "Plane info:" + planeInfo + "\n"
 		+ "Plane count:" + planesCount + "\n"
+			+ "seek planes:" + seekPlanes + "\n"
 		+ "close to plane:" + closeToPlane + "\n"
 		+ "overflow:" + overflow + "\n";
 		
@@ -81,6 +85,10 @@ public class DebugText : MonoBehaviour {
 
 	public static void Overflow(string s){
 		inst.overflow += s + "; ";
+	}
+
+	public static void SeekPlanes(string s){
+		inst.seekPlanes = s;
 	}
 
 

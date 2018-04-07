@@ -23,6 +23,7 @@ public class MetalOnion : MonoBehaviour {
 
 	public GameObject oilDerrick;
 	public GameObject onionGraphics;
+	public GameObject turretGraphics;
 
 	public State state;
 
@@ -38,6 +39,8 @@ public class MetalOnion : MonoBehaviour {
 	void Start(){
 		unwrapIndicator.fillAmount = 0;
 		oilDerrick.SetActive (false);
+		turretGraphics.SetActive(false);
+
 		DebugText.SetOnionCount(FindObjectsOfType<MetalOnion>().Length.ToString());
 		tendrils.AddRange(GetComponentsInChildren<Tendril> ());
 	}
@@ -68,6 +71,13 @@ public class MetalOnion : MonoBehaviour {
 
 	float camHoverCountdown = 0;
 	Quaternion targetRot;
+
+
+	public void OnTurretDestroyed(){
+		turretGraphics.SetActive (false);
+		SetState (State.Unwrapped);
+	}
+
 	// Update is called once per frame
 	void Update () {
 
@@ -127,27 +137,32 @@ public class MetalOnion : MonoBehaviour {
 			// we are at a plane and ready for unwrap
 			break;
 		case State.Unwrapping:
-			if (cameraHovering) {
-				foreach (Tendril t in tendrils) {
-					//				Debug.Log ("popin");
-					t.PopOut (); //SetState (Tendril.State.Out);
-				}
-				
-				targetRot = Quaternion.LookRotation (Camera.main.transform.position - transform.position);
-				targetFillAmount = 1;
-				if (unwrapIndicator.fillAmount > 0.99) {
-					unwrapIndicator.fillAmount = 1;
-					SetState (State.Unwrapped);
-					GetComponent<AudioSource> ().Play ();
-				}
 
-				unwrapIndicator.fillAmount = Mathf.MoveTowards (unwrapIndicator.fillAmount, targetFillAmount, Time.deltaTime * fillSpeed);
+			// new, turret pop and turn randomly
+			turretGraphics.SetActive(true);
 
-				transform.rotation = Quaternion.Slerp (transform.rotation, targetRot, Time.deltaTime * rotSpeed);
-
-			} else {
-				SetState (State.Ready);
-			}
+			// old, easy unwrapping
+//			if (cameraHovering) {
+//				foreach (Tendril t in tendrils) {
+//					//				Debug.Log ("popin");
+//					t.PopOut (); //SetState (Tendril.State.Out);
+//				}
+//				
+//				targetRot = Quaternion.LookRotation (Camera.main.transform.position - transform.position);
+//				targetFillAmount = 1;
+//				if (unwrapIndicator.fillAmount > 0.99) {
+//					unwrapIndicator.fillAmount = 1;
+//					SetState (State.Unwrapped);
+//					GetComponent<AudioSource> ().Play ();
+//				}
+//
+//				unwrapIndicator.fillAmount = Mathf.MoveTowards (unwrapIndicator.fillAmount, targetFillAmount, Time.deltaTime * fillSpeed);
+//
+//				transform.rotation = Quaternion.Slerp (transform.rotation, targetRot, Time.deltaTime * rotSpeed);
+//
+//			} else {
+//				SetState (State.Ready);
+//			}
 			break;
 		case State.Unwrapped:
 			break;
